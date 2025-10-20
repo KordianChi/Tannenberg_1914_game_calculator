@@ -53,7 +53,7 @@ class Commands(Toplevel):
     def commands_calculate(self):
         
         dice_result = randint(1, 6)
-        dice_result = dice_result + self.prev_command.get()
+        dice_result = dice_result - self.prev_command.get()
         command_result = commands_table[self.command_effective.get()][dice_result]
         
         if command_result:
